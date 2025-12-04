@@ -45,7 +45,7 @@ const SAMPLE_EXPERIENCE = [
   },
   {
     id: 'exp2',
-    title: 'Software Engineer, Acme Corp',
+    title: 'Software Engineer, Acme Inc',
     summary: 'Built internal tools and improved CI/CD pipelines.',
     details: 'Reduced deployment times by 40% and improved reliability.',
     date: '2018-2021',
