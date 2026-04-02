@@ -18,7 +18,12 @@ export default function ExperienceDetails({ project, onClose, inline = false }) 
         <button className="details-close" onClick={onClose} aria-label="Close">&times;</button>
       )}
       <h2 className="details-title">{project.title}</h2>
-      <div className="details-meta">{project.company} &middot; {project.date} &middot; {(project.tags || []).join(', ')}</div>
+      <div className="details-meta">{project.company} &middot; {project.date}</div>
+      <div className="details-tags">
+        {(project.tags || []).map((t) => (
+          <span key={t} className="tag">{t}</span>
+        ))}
+      </div>
       <ul className="details-list">
         {(project.details || []).map((item, i) => (
           <li key={i}>{item}</li>

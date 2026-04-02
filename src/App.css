@@ -130,6 +130,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .details-panel.empty{display:flex;align-items:center;justify-content:center;color:var(--muted)}
 .details-inline{padding:0}
 .details-empty{padding:12px;color:var(--muted)}
+.details-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .details-list{margin:0;padding:0 0 0 18px;line-height:1.7;color:var(--text);font-size:0.95rem}
 .details-list li{margin-bottom:6px}
 
