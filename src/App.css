@@ -18,6 +18,10 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
   padding:0 16px;
   align-items:start;
 }
+.app-container.wide-details{
+  max-width:1900px;
+  grid-template-columns:260px minmax(auto, 532px) 2fr;
+}
 
 .sidebar{
   position:sticky;
@@ -85,8 +89,14 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .profile-contact{margin-top:12px;font-size:0.85rem}
 .contact-link{display:block;color:var(--accent);text-decoration:none;margin-bottom:6px}
 .contact-muted{color:var(--muted)}
+.profile-socials{display:flex;justify-content:center;gap:16px;margin-top:14px}
+.social-link{color:var(--muted);transition:color .15s}
+.social-link:hover{color:var(--accent)}
 
 .main{min-height:360px}
+.main-experience{max-height:calc(100vh - 48px);overflow-y:auto;scrollbar-width:none}
+.main-experience::-webkit-scrollbar{display:none}
+.main-experience .projects-grid{grid-template-columns:1fr}
 .main-header{margin-bottom:18px}
 .app-title{margin:0;font-size:1.6rem;color:var(--text)}
 .app-subtitle{margin:6px 0;color:var(--muted)}
@@ -99,6 +109,15 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
 .project-date{font-size:0.8rem;color:var(--muted)}
 .tag{background:rgba(139,92,246,0.12);color:var(--accent);padding:4px 8px;border-radius:999px;font-size:0.75rem;margin-left:6px}
+
+.experience-card{background:var(--card);padding:14px;border-radius:10px;cursor:pointer;border:1px solid rgba(255,255,255,0.04);display:flex;flex-direction:column;justify-content:space-between;transition:transform .12s ease,box-shadow .12s ease}
+.experience-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(2,6,23,0.6)}
+.experience-card.active{border-color:var(--accent);box-shadow:0 4px 16px rgba(139,92,246,0.12)}
+.experience-title{margin:0 0 6px 0;font-size:1.02rem;color:var(--text)}
+.experience-company{margin:0;color:var(--muted);font-size:0.92rem}
+.experience-meta{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.experience-date{font-size:0.8rem;color:var(--muted)}
+.experience-tags{display:flex;flex-wrap:wrap;gap:6px}
 
 .details-overlay{position:fixed;inset:0;background:linear-gradient(rgba(2,6,23,0.45),rgba(2,6,23,0.45));display:flex;align-items:center;justify-content:center;padding:24px;z-index:80}
 .details{background:var(--card);max-width:760px;width:100%;padding:20px;border-radius:12px;box-shadow:0 20px 50px rgba(2,6,23,0.6);position:relative}
@@ -114,6 +133,9 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .details-panel.empty{display:flex;align-items:center;justify-content:center;color:var(--muted)}
 .details-inline{padding:0}
 .details-empty{padding:12px;color:var(--muted)}
+.details-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.details-list{margin:0;padding:0 0 0 18px;line-height:1.7;color:var(--text);font-size:0.95rem}
+.details-list li{margin-bottom:6px}
 
 @media (max-width:1100px){
   .app-container{grid-template-columns:220px 1fr;}
