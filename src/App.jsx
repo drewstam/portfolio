@@ -3,6 +3,9 @@ import './App.css'
 import Profile from './components/Profile'
 import ProjectCard from './components/ProjectCard'
 import ProjectDetails from './components/ProjectDetails'
+import ExperienceCard from './components/ExperienceCard'
+import ExperienceDetails from './components/ExperienceDetails'
+import EXPERIENCE from './data/experience'
 
 const SAMPLE_PROJECTS = [
   {
@@ -34,25 +37,6 @@ const SAMPLE_PROJECTS = [
 ]
 
 
-const SAMPLE_EXPERIENCE = [
-  {
-    id: 'exp1',
-    title: 'Senior Developer, Salesforce',
-    summary: 'Led cloud integrations and automation for enterprise clients.',
-    details: 'Architected scalable solutions, mentored junior engineers, and delivered key features.',
-    date: '2021-2024',
-    tags: ['Salesforce', 'Cloud', 'Leadership'],
-  },
-  {
-    id: 'exp2',
-    title: 'Software Engineer, Acme Inc',
-    summary: 'Built internal tools and improved CI/CD pipelines.',
-    details: 'Reduced deployment times by 40% and improved reliability.',
-    date: '2018-2021',
-    tags: ['CI/CD', 'Tooling'],
-  },
-]
-
 const SAMPLE_EDUCATION = [
   {
     id: 'edu1',
@@ -77,7 +61,7 @@ const GROUPS = [
     key: 'experience',
     label: 'Work Experience',
     summary: 'Professional roles and achievements.',
-    items: SAMPLE_EXPERIENCE,
+    items: EXPERIENCE,
   },
   {
     key: 'projects',
@@ -100,12 +84,12 @@ function App() {
   const currentGroup = GROUPS.find((g) => g.key === activeGroup)
 
   return (
-    <div className="app-container">
+    <div className={`app-container${activeGroup === 'experience' ? ' wide-details' : ''}`}>
       <aside className="sidebar">
         <Profile
           name="Andrew Stam"
           title="Software Engineer"
-          contact={{ email: 'j.andrew.stam@gmail.com', location: 'Digital Nomad' }}
+          contact={{ email: 'j.andrew.stam@gmail.com', location: 'Canada' }}
         />
         <nav className="sidebar-groups">
           {GROUPS.map((g) => (
@@ -124,20 +108,28 @@ function App() {
         </nav>
       </aside>
 
-      <main className="main">
+      <main className={`main${activeGroup === 'experience' ? ' main-experience' : ''}`}>
         <header className="main-header">
           <h1 className="app-title">Portfolio</h1>
           <p className="app-subtitle">{currentGroup.summary}</p>
         </header>
 
         <section className="projects-grid">
-          {currentGroup.items.map((item) => (
-            <ProjectCard key={item.id} project={item} onClick={setSelected} />
-          ))}
+          {currentGroup.items.map((item) =>
+            activeGroup === 'experience' ? (
+              <ExperienceCard key={item.id} project={item} onClick={setSelected} active={selected?.id === item.id} />
+            ) : (
+              <ProjectCard key={item.id} project={item} onClick={setSelected} />
+            )
+          )}
         </section>
       </main>
 
-      <ProjectDetails project={selected} onClose={() => setSelected(null)} inline />
+      {activeGroup === 'experience' ? (
+        <ExperienceDetails project={selected} onClose={() => setSelected(null)} inline />
+      ) : (
+        <ProjectDetails project={selected} onClose={() => setSelected(null)} inline />
+      )}
     </div>
   )
 }
