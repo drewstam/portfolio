@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../assets/salesforce.png'
+import profile from '../assets/Salesforce.png'
 
 export default function Profile({ name = 'Andrew Stam', title = 'Software Developer', contact = {} }) {
   return (
