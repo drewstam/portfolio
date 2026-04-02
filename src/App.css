@@ -89,6 +89,9 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .profile-contact{margin-top:12px;font-size:0.85rem}
 .contact-link{display:block;color:var(--accent);text-decoration:none;margin-bottom:6px}
 .contact-muted{color:var(--muted)}
+.profile-socials{display:flex;justify-content:center;gap:16px;margin-top:14px}
+.social-link{color:var(--muted);transition:color .15s}
+.social-link:hover{color:var(--accent)}
 
 .main{min-height:360px}
 .main-experience{max-height:calc(100vh - 48px);overflow-y:auto;scrollbar-width:none}
