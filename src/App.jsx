@@ -15,6 +15,16 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [selectedExperience, setSelectedExperience] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,7 +52,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <TopNav active={activeSection} onNavigate={handleNavigate} />
+      <TopNav active={activeSection} onNavigate={handleNavigate} theme={theme} onToggleTheme={toggleTheme} />
 
       <div className="page-layout">
         <aside className="profile-column">
