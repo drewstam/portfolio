@@ -27,16 +27,28 @@ A personal portfolio website for Andrew Stam — software engineer. Showcases wo
 ## Project Structure
 ```
 src/
-  main.jsx             — App entry point (StrictMode, root render)
-  App.jsx              — Main app component (layout, state, data)
-  App.css              — App-level styles
-  index.css            — Global/reset styles
+  main.jsx                  — App entry point (StrictMode, root render)
+  App.jsx                   — Top-level app: layout, theme state, section navigation, modal state
+  App.css                   — App-level styles, CSS variables, light/dark theme tokens
+  index.css                 — Minimal global reset and base font setup
   components/
-    Profile.jsx        — Sidebar profile card
-    ProjectCard.jsx    — Card for each item in the grid
-    ProjectDetails.jsx — Expanded detail view for selected item
-  assets/              — Static assets (images, SVGs)
-public/                — Public static files
+    TopNav.jsx              — Sticky top navbar with section nav buttons + light/dark toggle
+    Profile.jsx              — Profile card (photo, name, title, location, social/email icons)
+    HomeSection.jsx         — "Software Engineer" home section with two-tone headline + summary
+    ExperienceSection.jsx   — Single-column list of work experience cards
+    ExperienceCard.jsx      — Individual experience card with location badge
+    ExperienceDetails.jsx   — Modal showing full details (title, company/date, tag pills, bulleted list)
+    ProjectsSection.jsx     — Single-column list of project cards
+    ProjectCard.jsx         — Individual project card
+    ProjectDetails.jsx      — Modal showing full project details
+    ToolsSection.jsx        — 2-column grid of placeholder tool cards
+  data/
+    home.js                 — Home section title + summary
+    experience.js           — Work experience entries (title, company, location, date, tags, details[])
+    projects.js             — Projects entries
+    tools.js                — Placeholder tools
+  assets/                   — Static assets (profile-pic.png, Andrew_Stam.pdf resume, etc.)
+public/                     — Public static files
 ```
 
 ## Commands
@@ -49,7 +61,8 @@ public/                — Public static files
 - Components use `.jsx` extension
 - Vanilla CSS with class-based styling (no CSS modules, no Tailwind, no CSS-in-JS)
 - Relative imports (no path aliases configured)
-- Data is currently hardcoded in `App.jsx` as constants (`SAMPLE_PROJECTS`, `SAMPLE_EXPERIENCE`, `SAMPLE_EDUCATION`)
+- Section content lives in `src/data/*.js` modules (one per section), each exporting a default array or object. Components import their own data — `App.jsx` does not own content.
+- Theming uses CSS custom properties on `:root` (dark) with overrides under `[data-theme="light"]`. Theme is persisted to `localStorage`.
 
 ## How This Project Is Structured
 
