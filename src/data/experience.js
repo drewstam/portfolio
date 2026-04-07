@@ -14,6 +14,7 @@ const EXPERIENCE = [
       'Developed a dynamic localization service providing multilingual UI support across the platform.',
     ],
     date: 'Jan 2024 – Jan 2026',
+    location: 'Cayman Islands',
     tags: ['C#', 'ASP.NET Core', 'EF Core', 'PostgreSQL', 'Clean Architecture'],
   },
   {
@@ -31,6 +32,7 @@ const EXPERIENCE = [
       'Participated in Agile ceremonies, peer code reviews, and release cycles.',
     ],
     date: 'Dec 2022 – Jan 2024',
+    location: 'Toronto, Ontario',
     tags: ['C#', 'ASP.NET Core', 'SQL Server', 'Angular', 'TypeScript'],
   },
   {
@@ -46,6 +48,7 @@ const EXPERIENCE = [
       'Participated in Salesforce administration and system support for multiple business units.',
     ],
     date: 'Jan 2022 – Jul 2022',
+    location: 'Cayman Islands',
     tags: ['C#', 'ASP.NET Core', 'EF Core', 'SQL Server', 'Angular'],
   },
   {
@@ -63,6 +66,7 @@ const EXPERIENCE = [
       'Built and maintained integrations between external regulatory websites and internal enterprise platforms.',
     ],
     date: 'Jan 2020 – Jan 2022',
+    location: 'Cayman Islands',
     tags: ['C#', 'ASP.NET Core', 'EF Core', 'SQL Server', 'CQRS', 'DevOps'],
   },
   {
@@ -78,6 +82,7 @@ const EXPERIENCE = [
       'Supported backend systems and performed database updates and troubleshooting.',
     ],
     date: 'Feb 2019 – Jan 2020',
+    location: 'Cayman Islands',
     tags: ['C#', 'ASP.NET Core', 'SQL Server', 'Salesforce'],
   },
   {
@@ -94,6 +99,7 @@ const EXPERIENCE = [
       'Monitored performance metrics and maintained vendor relationships for hosting and security services.',
     ],
     date: 'May 2018 – Dec 2018',
+    location: 'Toronto, Ontario',
     tags: ['C#', '.NET Framework', 'SQL Server', 'Leadership'],
   },
   {
@@ -109,6 +115,7 @@ const EXPERIENCE = [
       'Supported production systems by diagnosing and resolving database and application issues.',
     ],
     date: 'Nov 2017 – May 2018',
+    location: 'Toronto, Ontario',
     tags: ['C#', '.NET Framework', 'SQL Server', 'Tableau'],
   },
   {
@@ -124,6 +131,7 @@ const EXPERIENCE = [
       'Created unit tests to maintain stability and prevent regressions.',
     ],
     date: 'May 2017 – Nov 2017',
+    location: 'Toronto, Ontario',
     tags: ['C#', 'Angular', 'TypeScript', 'SQL Server'],
   },
   {
@@ -138,6 +146,7 @@ const EXPERIENCE = [
       'Built WCF web services and optimized SQL Server stored procedures.',
     ],
     date: 'Oct 2009 – Mar 2017',
+    location: 'Cayman Islands / Toronto, Ontario',
     tags: ['C#', 'ASP.NET MVC', 'WCF', 'SQL Server', 'SSRS'],
   },
 ]

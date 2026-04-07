@@ -80,10 +80,9 @@ If you find something that sounds relevant or required, then feel free to go ahe
 
 ### Skills — `.claude/skills/`
 
-- `react-best-practices` - always refer to this skill to ensure that all React best practices are being used in generated code.
+Each skill lives in its own folder under `.claude/skills/<skill-name>/skill.md`. Use them when prompted, when the task clearly matches, or when a rule requires it.
 
-Repeatable workflows. Use them when prompted or when the task clearly matches:
-
+- `react-best-practices` — Performance and best-practice guide for React/JSX work. **Always consult before non-trivial React changes.** Enforced by `.claude/rules/react-best-practices.md`.
 - `scope-feature` — Phase 1: Takes a rough brief through a 3-round conversation (approach analysis, scoping questions, extended brief). Run before planning.
 - `plan-feature-implementation` — Phase 2: Takes the scoped spec and creates a step-by-step implementation plan using the human-first method. Run after scoping, before building.
 

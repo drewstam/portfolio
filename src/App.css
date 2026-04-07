@@ -187,7 +187,10 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .projects-list{display:flex;flex-direction:column;gap:16px}
 
 /* Experience card */
-.experience-card{background:var(--card);padding:14px;border-radius:10px;cursor:pointer;border:1px solid var(--border-soft);display:flex;flex-direction:column;justify-content:space-between;transition:transform .12s ease,box-shadow .12s ease,background .25s,border-color .25s}
+.experience-card{position:relative;background:var(--card);padding:14px;border-radius:10px;cursor:pointer;border:1px solid var(--border-soft);display:flex;flex-direction:column;justify-content:space-between;transition:transform .12s ease,box-shadow .12s ease,background .25s,border-color .25s}
+.experience-card-location{position:absolute;top:14px;right:14px;display:flex;align-items:center;gap:5px;color:var(--muted);font-size:0.78rem}
+.experience-card-location svg{flex-shrink:0}
+.experience-card-body{padding-right:140px}
 .experience-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
 .experience-title{margin:0 0 6px 0;font-size:1.02rem;color:var(--text)}
 .experience-company{margin:0;color:var(--muted);font-size:0.92rem}
