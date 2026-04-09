@@ -256,6 +256,129 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 }
 .tool-name{color:var(--text);font-size:0.95rem;font-weight:500}
 
+/* Let's Connect button in Profile card */
+.lets-connect-btn{
+  display:block;
+  width:100%;
+  margin-top:14px;
+  padding:9px 0;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-size:0.9rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:opacity .15s, transform .12s;
+}
+.lets-connect-btn:hover{opacity:0.88;transform:translateY(-1px)}
+
+/* Contact modal — title and subtitle */
+.contact-modal-title{margin:8px 0 6px 0;font-size:1.4rem;font-weight:700;color:var(--text)}
+.contact-modal-subtitle{margin:0 0 20px 0;color:var(--muted);font-size:0.92rem;line-height:1.5}
+
+/* Contact form layout */
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.contact-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-field{display:flex;flex-direction:column;gap:5px}
+.contact-label{font-size:0.85rem;font-weight:500;color:var(--text)}
+
+/* Contact form inputs */
+.contact-input{
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:8px;
+  color:var(--text);
+  font-size:0.92rem;
+  font-family:inherit;
+  padding:10px 12px;
+  transition:border-color .15s, box-shadow .15s;
+  width:100%;
+  box-sizing:border-box;
+}
+.contact-input:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(139,92,246,0.15);
+}
+.contact-input.error{border-color:#ef4444}
+.contact-input:disabled{opacity:0.55;cursor:not-allowed}
+textarea.contact-input{resize:vertical;min-height:110px}
+
+/* Inline validation error text */
+.contact-error-text{font-size:0.78rem;color:#ef4444;margin:0}
+
+/* Submission error banner */
+.contact-error-banner{
+  background:rgba(239,68,68,0.1);
+  border:1px solid rgba(239,68,68,0.3);
+  border-radius:8px;
+  color:#ef4444;
+  font-size:0.88rem;
+  line-height:1.5;
+  padding:10px 14px;
+}
+
+/* Submit button */
+.contact-submit-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  padding:11px 0;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-size:0.95rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:opacity .15s, transform .12s;
+  margin-top:4px;
+}
+.contact-submit-btn:hover:not(:disabled){opacity:0.88;transform:translateY(-1px)}
+.contact-submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+
+/* Spinner */
+.contact-spinner{
+  width:16px;
+  height:16px;
+  border:2px solid rgba(255,255,255,0.35);
+  border-top-color:#fff;
+  border-radius:50%;
+  animation:contact-spin .7s linear infinite;
+  flex-shrink:0;
+}
+@keyframes contact-spin{to{transform:rotate(360deg)}}
+
+/* Success state */
+.contact-success{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  padding:32px 0 8px;
+  text-align:center;
+}
+.contact-success-message{font-size:1.1rem;font-weight:600;color:var(--text)}
+.contact-success-close{
+  background:transparent;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  border-radius:999px;
+  padding:8px 28px;
+  font-size:0.9rem;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.contact-success-close:hover{background:var(--tag-bg)}
+
+/* Honeypot — off-screen, not display:none so bots see it but screen readers skip it */
+.honeypot-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
+
 /* Responsive */
 @media (max-width:900px){
   .page-layout{grid-template-columns:1fr;gap:24px}
@@ -279,4 +402,5 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
   .home-headline{font-size:2rem}
   .section-heading{font-size:1.6rem}
   .page-section{padding:40px 0 30px 0}
+  .contact-form-row{grid-template-columns:1fr}
 }
