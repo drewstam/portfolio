@@ -140,8 +140,27 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .contact-link{display:block;color:var(--accent);text-decoration:none;margin-bottom:6px}
 .contact-muted{color:var(--muted)}
 .profile-socials{display:flex;justify-content:center;gap:16px;margin-top:14px}
-.social-link{color:var(--muted);transition:color .15s}
+.social-link{color:var(--muted);transition:color .15s;position:relative}
 .social-link:hover{color:var(--accent)}
+.social-link::after{
+  content:attr(aria-label);
+  position:absolute;
+  bottom:calc(100% + 6px);
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--card);
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-size:0.72rem;
+  white-space:nowrap;
+  padding:4px 8px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .15s;
+  box-shadow:var(--shadow-card);
+}
+.social-link:hover::after{opacity:1}
 
 /* Page sections */
 .page-section{

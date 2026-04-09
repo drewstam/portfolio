@@ -1,4 +1,5 @@
 import profile from '../assets/profile-pic.png'
+import resume from '../assets/Andrew_Stam.pdf'
 
 export default function Profile({ name = 'Andrew Stam', title = 'Software Developer', contact = {}, onOpenContact, triggerRef }) {
   return (
@@ -26,6 +27,13 @@ export default function Profile({ name = 'Andrew Stam', title = 'Software Develo
           <a href="mailto:j.andrew.stam@gmail.com" className="social-link" aria-label="Email">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+          <a href={resume} download="Andrew_Stam.pdf" className="social-link" aria-label="Download Resume">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
           </a>
         </div>
