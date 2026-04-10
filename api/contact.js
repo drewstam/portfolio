@@ -60,7 +60,7 @@ export default async function handler(req, res) {
     const { error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      reply_to: email.trim(),
+      replyTo: email.trim(),
       subject: `[Portfolio Contact] ${subject.trim()}`,
       text: emailBody,
     })
