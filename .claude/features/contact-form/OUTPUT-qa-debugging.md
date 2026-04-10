@@ -17,30 +17,30 @@
 
 ### Trigger button
 
-- [ ] "Let's Connect" button appears in the Profile card, below the GitHub/LinkedIn/email icons
-- [ ] Button is solid accent purple with white text
-- [ ] Button is full-width within the Profile card
-- [ ] Hovering the button gives a visual response (slight lift / opacity change)
+- [x] "Let's Connect" button appears in the Profile card, below the GitHub/LinkedIn/email icons
+- [x] Button is solid accent purple with white text
+- [x] Button is full-width within the Profile card
+- [x] Hovering the button gives a visual response (slight lift / opacity change)
 
 ### Modal opens
 
-- [ ] Clicking "Let's Connect" opens the contact modal
-- [ ] Modal is centered on screen with a dark backdrop
-- [ ] Modal title is "Reach Out"
-- [ ] Subtitle text reads "Drop me a message and I'll get back to you securely to your inbox."
-- [ ] Close button (×) is visible in the top-right corner
-- [ ] Focus moves to the Name field automatically when the modal opens
+- [x] Clicking "Let's Connect" opens the contact modal
+- [x] Modal is centered on screen with a dark backdrop
+- [x] Modal title is "Reach Out"
+- [x] Subtitle text reads "Drop me a message and I'll get back to you securely to your inbox."
+- [x] Close button (×) is visible in the top-right corner
+- [x] Focus moves to the Name field automatically when the modal opens
 
 ### Form layout (desktop)
 
-- [ ] Name and Email Address fields are side-by-side in a 2-column row
-- [ ] Subject field is full-width below
-- [ ] "Your Message" textarea is full-width below Subject
-- [ ] "Send Message" button is full-width at the bottom
+- [x] Name and Email Address fields are side-by-side in a 2-column row
+- [x] Subject field is full-width below
+- [x] "Your Message" textarea is full-width below Subject
+- [x] "Send Message" button is full-width at the bottom
 
 ### Form layout (mobile — resize to < 600px)
 
-- [ ] All fields stack to a single column (Name and Email no longer side-by-side)
+- [x] All fields stack to a single column (Name and Email no longer side-by-side)
 
 ### Validation
 
@@ -55,21 +55,21 @@
 
 ### Closing the modal
 
-- [ ] Clicking the × button closes the modal
-- [ ] Clicking the dark backdrop closes the modal
-- [ ] Pressing Escape closes the modal
-- [ ] After closing, focus returns to the "Let's Connect" button in the Profile card
+- [x] Clicking the × button closes the modal
+- [x] Clicking the dark backdrop closes the modal
+- [x] Pressing Escape closes the modal
+- [x] After closing, focus returns to the "Let's Connect" button in the Profile card
 
 ### Keyboard / accessibility
 
-- [ ] Tab cycles through all interactive elements inside the modal (Name → Email → Subject → Message → Send Message → close ×) without escaping to the page behind
-- [ ] Shift+Tab cycles in reverse within the modal
+- [x] Tab cycles through all interactive elements inside the modal (Name → Email → Subject → Message → Send Message → close ×) without escaping to the page behind
+- [x] Shift+Tab cycles in reverse within the modal
 - [ ] Pressing Enter while focused in any input submits the form
 
 ### Reset behavior
 
-- [ ] Opening the modal shows all empty fields
-- [ ] Partially filling in fields, closing, and reopening shows empty fields again
+- [x] Opening the modal shows all empty fields
+- [x] Partially filling in fields, closing, and reopening shows empty fields again
 
 ### Loading state (requires Vercel preview)
 
@@ -91,14 +91,14 @@
 
 ### Spam / honeypot
 
-- [ ] The honeypot `website` field is not visible on screen
-- [ ] The honeypot field is not reachable by Tab key
+- [x] The honeypot `website` field is not visible on screen
+- [x] The honeypot field is not reachable by Tab key
 
 ### Theming
 
-- [ ] Modal looks correct in dark mode
-- [ ] Modal looks correct in light mode
-- [ ] Switching theme while the modal is open updates colors immediately
+- [x] Modal looks correct in dark mode
+- [x] Modal looks correct in light mode
+- [x] Switching theme while the modal is open updates colors immediately
 
 ### Email delivery (requires Vercel preview + env vars set)
 
