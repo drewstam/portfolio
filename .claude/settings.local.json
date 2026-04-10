@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm audit:*)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\)\\);const vulns=d.vulnerabilities||{};Object.entries\\(vulns\\).forEach\\(\\([k,v]\\)=>console.log\\(k,v.severity,v.via?.map?.\\(x=>typeof x==='string'?x:x.title\\)||[]\\)\\)\")",
+      "Bash(node -e \"const p=require\\('./package.json'\\);console.log\\('type:', p.type||'\\(not set - CommonJS default\\)'\\)\")"
+    ]
+  }
+}

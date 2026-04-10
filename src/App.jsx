@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Profile from './components/Profile'
 import TopNav from './components/TopNav'
@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection'
 import ToolsSection from './components/ToolsSection'
 import ExperienceDetails from './components/ExperienceDetails'
 import ProjectDetails from './components/ProjectDetails'
+import ContactModal from './components/ContactModal'
 
 const SECTION_IDS = ['home', 'experience', 'projects', 'tools']
 
@@ -15,6 +16,8 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [selectedExperience, setSelectedExperience] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [contactOpen, setContactOpen] = useState(false)
+  const contactTriggerRef = useRef(null)
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark'
   })
@@ -46,6 +49,7 @@ function App() {
   }, [])
 
   const handleNavigate = (id) => {
+    setActiveSection(id)
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -59,7 +63,9 @@ function App() {
           <Profile
             name="Andrew Stam"
             title="Software Engineer"
-            contact={{ email: 'j.andrew.stam@gmail.com', location: 'Canada' }}
+            contact={{ email: 'j.andrew.stam@gmail.com', location: 'Toronto, ON Canada' }}
+            onOpenContact={() => setContactOpen(true)}
+            triggerRef={contactTriggerRef}
           />
         </aside>
 
@@ -81,6 +87,12 @@ function App() {
         <ProjectDetails
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
+        />
+      )}
+      {contactOpen && (
+        <ContactModal
+          onClose={() => setContactOpen(false)}
+          triggerRef={contactTriggerRef}
         />
       )}
     </div>
