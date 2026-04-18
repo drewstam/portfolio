@@ -186,8 +186,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .home-headline-solid{color:var(--text)}
 .section-heading-outline,
 .home-headline-outline{
-  color:transparent;
-  -webkit-text-stroke:1.5px var(--headline-outline);
+  color:var(--accent);
 }
 
 /* Home section */
