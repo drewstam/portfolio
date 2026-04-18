@@ -9,13 +9,16 @@ import ToolsSection from './components/ToolsSection'
 import ExperienceDetails from './components/ExperienceDetails'
 import ProjectDetails from './components/ProjectDetails'
 import ContactModal from './components/ContactModal'
+import CertificationsSection from './components/CertificationsSection'
+import CertificationModal from './components/CertificationModal'
 
-const SECTION_IDS = ['home', 'experience', 'projects', 'tools']
+const SECTION_IDS = ['home', 'certifications', 'experience', 'projects', 'tools']
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [selectedExperience, setSelectedExperience] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedCert, setSelectedCert] = useState(null)
   const [contactOpen, setContactOpen] = useState(false)
   const contactTriggerRef = useRef(null)
   const [theme, setTheme] = useState(() => {
@@ -71,12 +74,19 @@ function App() {
 
         <main className="content-column">
           <HomeSection />
+          <CertificationsSection onSelect={setSelectedCert} />
           <ExperienceSection onSelect={setSelectedExperience} />
           <ProjectsSection onSelect={setSelectedProject} />
           <ToolsSection />
         </main>
       </div>
 
+      {selectedCert && (
+        <CertificationModal
+          cert={selectedCert}
+          onClose={() => setSelectedCert(null)}
+        />
+      )}
       {selectedExperience && (
         <ExperienceDetails
           project={selectedExperience}
