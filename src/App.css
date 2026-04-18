@@ -409,6 +409,62 @@ textarea.contact-input{resize:vertical;min-height:110px}
 /* Honeypot — off-screen, not display:none so bots see it but screen readers skip it */
 .honeypot-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
 
+/* Bottom tab bar — mobile only, hidden on desktop */
+.bottom-tab-bar{display:none}
+
+@media (max-width:640px){
+  /* Hide top nav entirely on mobile — bottom tab bar takes over */
+  .top-nav{display:none}
+
+  /* Show bottom tab bar */
+  .bottom-tab-bar{
+    display:flex;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:50;
+    background:var(--nav-bg);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border-top:1px solid var(--border);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .bottom-tab-btn{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    padding:8px 4px;
+    background:transparent;
+    border:none;
+    color:var(--muted);
+    cursor:pointer;
+    transition:color .15s;
+    min-width:0;
+  }
+  .bottom-tab-btn.active{color:var(--accent)}
+  .bottom-tab-btn svg{flex-shrink:0}
+  .bottom-tab-label{font-size:0.65rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  .bottom-tab-bar .theme-toggle{
+    flex:0 0 52px;
+    border-radius:0;
+    border:none;
+    border-left:1px solid var(--border);
+    background:transparent;
+    width:auto;
+    height:auto;
+    margin:0;
+    padding:8px 12px;
+    align-self:stretch;
+  }
+
+  /* Push page content above the tab bar */
+  .app-container{padding-bottom:68px}
+}
+
 /* Responsive */
 @media (max-width:900px){
   .page-layout{grid-template-columns:1fr;gap:24px}
