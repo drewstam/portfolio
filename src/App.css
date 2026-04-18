@@ -275,6 +275,17 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 }
 .tool-name{color:var(--text);font-size:0.95rem;font-weight:500}
 
+/* Certification card */
+.cert-card-date{position:absolute;top:14px;right:14px;color:var(--muted);font-size:0.78rem;white-space:nowrap}
+.cert-card-body{padding-right:160px}
+.cert-verify-link{display:inline-block;margin-top:10px;font-size:0.78rem;color:var(--accent);text-decoration:none;white-space:nowrap;transition:opacity .15s}
+.cert-verify-link:hover{opacity:0.75}
+
+/* Certification image modal */
+.cert-modal{max-width:860px;width:90vw}
+.cert-modal-title{margin:0 0 16px 0;font-size:1.1rem;font-weight:600;color:var(--text);padding-right:32px}
+.cert-modal-image{width:100%;height:auto;border-radius:8px;display:block}
+
 /* Let's Connect button in Profile card */
 .lets-connect-btn{
   display:block;
