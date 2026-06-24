@@ -1,3 +1,5 @@
+import aviMemoIcon from '../assets/AviMemo_logo.png'
+
 const PROJECTS = [
   {
     id: '1',
@@ -24,6 +26,15 @@ const PROJECTS = [
     details: 'Authored PR that added feature Y and improved docs; accepted upstream after review.',
     date: '2022',
     tags: ['OSS', 'Documentation'],
+  },
+  {
+    id: '4',
+    title: 'Aviary Memo', // confirmed name (per app's splash screen)
+    summary: 'An iOS app for keeping a birdwatching journal.', // PLACEHOLDER copy
+    date: '2026', // PLACEHOLDER — replace with real release date
+    tags: ['iOS'], // PLACEHOLDER — add real tech stack tags
+    landingPageUrl: '/avimemo/index.html',
+    icon: aviMemoIcon,
   },
 ]
 
