@@ -224,6 +224,20 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter, ui-sans-
 .project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
 .project-date{font-size:0.8rem;color:var(--muted)}
 
+/* Testimonials section — single column, embedded video cards */
+.testimonials-list{display:flex;flex-direction:column;gap:16px}
+.testimonial-card{background:var(--card);border-radius:10px;border:1px solid var(--border-soft);overflow:hidden;transition:background .25s,border-color .25s}
+.testimonial-video{position:relative;width:100%;aspect-ratio:16 / 9;background:#000}
+.testimonial-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.testimonial-body{padding:14px}
+.testimonial-author{margin:0 0 4px 0;font-size:1.02rem;color:var(--text)}
+.testimonial-role{margin:0 0 10px 0;color:var(--muted);font-size:0.85rem}
+.testimonial-company-link{color:var(--accent);text-decoration:none}
+.testimonial-company-link:hover{text-decoration:underline}
+.testimonial-summary{margin:0 0 12px 0;color:var(--text);font-size:0.92rem;line-height:1.6}
+.testimonial-link{color:var(--accent);font-size:0.85rem;font-weight:600;text-decoration:none}
+.testimonial-link:hover{text-decoration:underline}
+
 /* Tag pills */
 .tag{background:var(--tag-bg);color:var(--accent);padding:4px 8px;border-radius:999px;font-size:0.75rem;margin-left:6px}
 
