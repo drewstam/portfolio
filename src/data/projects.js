@@ -1,13 +1,17 @@
 const PROJECTS = [
   {
     id: '1',
-    title: 'Project Alpha',
-    summary: 'A web app that helps teams coordinate tasks and milestones.',
+    title: 'Inspire Small Business',
+    summary: 'A Shopify app that serves as an internal client portal for support, tutorials, and billing.',
     details:
-      'Built with React and Vite. Implemented feature X, improved performance by 30%, and led deployment.',
-    date: '2024',
-    tags: ['React', 'Vite', 'Performance'],
-    links: [{ href: 'https://example.com', label: 'Live' }],
+      'Designed and built the entire app as a contractor for Inspire Small Business, a Sydney-based Shopify agency. ' +
+      'The app runs inside the Shopify Admin and gives the agency\'s existing clients one place to manage retainers, ' +
+      'task logs, and hourly billing summaries; access tutorial videos, support tickets, and important store info; ' +
+      'and track page speed history alongside theme update guidance from the agency. ' +
+      'Published on the Shopify App Store in August 2026.',
+    date: '2026',
+    tags: ['Shopify', 'React', 'TypeScript', 'Postgres', 'Railway'],
+    links: [{ href: 'https://apps.shopify.com/inspire-small-business', label: 'Shopify App Store' }],
   },
   {
     id: '2',
