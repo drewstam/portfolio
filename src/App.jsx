@@ -5,6 +5,7 @@ import TopNav from './components/TopNav'
 import HomeSection from './components/HomeSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
+import TestimonialsSection from './components/TestimonialsSection'
 import ToolsSection from './components/ToolsSection'
 import ExperienceDetails from './components/ExperienceDetails'
 import ProjectDetails from './components/ProjectDetails'
@@ -12,7 +13,7 @@ import ContactModal from './components/ContactModal'
 import CertificationsSection from './components/CertificationsSection'
 import CertificationModal from './components/CertificationModal'
 
-const SECTION_IDS = ['home', 'certifications', 'experience', 'projects', 'tools']
+const SECTION_IDS = ['home', 'certifications', 'experience', 'projects', 'testimonials', 'tools']
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -81,6 +82,7 @@ function App() {
           <CertificationsSection onSelect={setSelectedCert} />
           <ExperienceSection onSelect={setSelectedExperience} />
           <ProjectsSection onSelect={setSelectedProject} />
+          <TestimonialsSection />
           <ToolsSection />
         </main>
       </div>
